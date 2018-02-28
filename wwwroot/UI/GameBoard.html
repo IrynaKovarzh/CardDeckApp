@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Card rotation</title>
+    <title>Game board</title>
     <style>
         .card {
             -webkit-transform-style: preserve-3d;
@@ -10,8 +10,11 @@
 
         .back, .front {
             position: absolute;
-            width: 272px;
-            height: 380px;
+           /* margin: auto;
+            top: 0; left: 0; bottom: 0; right: 0;
+            left: 50%;  top: 50%; bottom: 50%; right: 50%; */
+             width: 272px; 
+             height: 380px; 
             -moz-transition: all .8s;
             -o-transition: all .8s;
             -webkit-transition: all .8s;
@@ -19,11 +22,11 @@
         }
 
         .back {
-            background-image: url(back.jpg);
+            background-image: url("Images/back.jpg");
         }
 
         .front {
-            background-image: url(front.jpg);
+            background-image: url("Images/front.jpg");
         
             -moz-transform: rotate3d(0,1,0, 180deg);
             -ms-transform: rotate3d(0,1,0, 180deg);
@@ -53,12 +56,23 @@
             -webkit-backface-visibility: hidden;
             backface-visibility: hidden; /* Determines whether the content of the element is visible. With the help of 3d transformations, is turned away from the user */
         }
+
+.Absolute-Center {  /*on the 'board', not the screen */
+  width: 50%;
+  height: 50%; 
+  /*overflow: auto; */
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0
+}
     </style>
 </head>
 <body>
-    <div class="card backface">
-        <div class="back"></div>
-        <div class="front"></div>
+    <div class="Absolute-Center">
+       <div class="card backface">
+          <div class="back"></div>
+          <div class="front"></div>
+        </div>
     </div>
 </body>
 </html>
