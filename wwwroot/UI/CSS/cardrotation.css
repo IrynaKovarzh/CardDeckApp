@@ -17,11 +17,11 @@
 }
 
 .back {
-    background-image: url("images/back.jpg");
+    background-image: url("../images/back.jpg");
 }
 
 .front {
-    background-image: url("images/front.jpg");
+    background-image: url("../images/front.jpg");
 
     -moz-transform: rotate3d(0,1,0, 180deg);
     -ms-transform: rotate3d(0,1,0, 180deg);

@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>    
+
+<head>
     <title>Game board</title>
 
-    <link rel="stylesheet" type="text/css" href="css/absolutecenter.css"> 
+    <link rel="stylesheet" type="text/css" href="css/absolutecenter.css">
     <link rel="stylesheet" type="text/css" href="css/cardrotation.css">
-    
+
 </head>
+
 <body>
-    <div class="Absolute-Center">
-       <div class="card backface">
-          <div class="back"></div>
-          <div class="front"></div>
+
+    <form name="Board">
+
+        <input type="button" onclick="takecart(this.form)" value="Take a cart" />
+
+        <div class="Absolute-Center">
+            <div class="card backface">
+                <div class="back"></div>
+                <div class="front"></div>
+            </div>
         </div>
-    </div>
+    </form>
+
+    <script src="script/takecart.js"></script> 
+
 </body>
 </html>
