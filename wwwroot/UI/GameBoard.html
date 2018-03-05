@@ -8,19 +8,24 @@
     <link rel="stylesheet" type="text/css" href="css/cardrotation.css">
 </head>
 
-<body>
-    <form name="Board">
-        <input type="button" onclick="takecard(this.form)" value="Take a card" />
-
-        <div class="Absolute-Center">
-            <div class="card backface">
-                <div class="back"></div>
-                <div class="front"></div>
-            </div>
-        </div>
+<body onload = "showDeck();">
+    
+    <form name="Board" class="board">
+       <input type="button" onclick="takecard(this.form)" value="TAKE A CARD" />
+    </div>
 
     </form>
 
+<script type="text/javascript">
+function showDeck(){
+ // create a deck
+  document.querySelector(".board").innerHTML += Deck(4);
+}
+</script> 
+
+    <script src="script/deck.js"></script>
+    <script src="script/card.js"></script>
     <script src="script/takecard.js"></script> 
+
 </body>
 </html>

@@ -1,8 +1,11 @@
-.Absolute-Center {  /*on the 'board', not the screen */
-    width: 50%;
+.absolute-center {  /*on the 'board', not the screen */
+    /*width: 50%;
     height: 50%; 
-    /*overflow: auto; */
-    margin: auto;
+    /*overflow: auto;
+    margin: auto; */
+    width: 272px;
+    height: 380px;
     position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0
+    top: 50%; right: 50%;
+    transform: translate3d(50%, -50%, 0);
   }

@@ -1,6 +1,14 @@
 .card {
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d; /* children should be displayed in 3D space*/
+    
+    -moz-transition: all .8s;
+    -o-transition: all .8s;
+    -webkit-transition: all .8s;
+    transition: all .8s;
+    
+    width: 272px; 
+    height: 380px; 
 }
 
 .back, .front {
@@ -8,8 +16,10 @@
    /* margin: auto;
     top: 0; left: 0; bottom: 0; right: 0;
     left: 50%;  top: 50%; bottom: 50%; right: 50%; */
+     
      width: 272px; 
      height: 380px; 
+
     -moz-transition: all .8s;
     -o-transition: all .8s;
     -webkit-transition: all .8s;
