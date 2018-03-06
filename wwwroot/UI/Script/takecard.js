@@ -14,6 +14,9 @@ function takecard(form) {
         lastCard.getElementsByClassName('front')[0].style.transform = 'rotate3d(0,1,0, 0deg)';
         lastCard.classList.add("flipped");
         lastCard.classList.remove("not-flipped");
+
+        //To shift a bit a top flipped card
+        lastCard.style.transform = 'translate3d(-5%, -5%, 0)' ;
     }
            
 }
