@@ -46,6 +46,7 @@
     -o-transform: rotate3d(0,1,0, 180deg);
     -webkit-transform: rotate3d(0,1,0, 180deg);
     transform: rotate3d(0,1,0, 180deg);
+    transform: translate3d(-5%, -5%, 0);
 }
 
 .card:hover .front {
