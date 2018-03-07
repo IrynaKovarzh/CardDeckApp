@@ -31,7 +31,7 @@
 }
 
 .front {
-    background-image: url("../images/front.jpg");
+    background-image: url("../images/front.jpg"); 
 
     -moz-transform: rotate3d(0,1,0, 180deg);
     -ms-transform: rotate3d(0,1,0, 180deg);
@@ -45,8 +45,9 @@
     -ms-transform: rotate3d(0,1,0, 180deg);
     -o-transform: rotate3d(0,1,0, 180deg);
     -webkit-transform: rotate3d(0,1,0, 180deg);
-    transform: rotate3d(0,1,0, 180deg);
-    transform: translate3d(-5%, -5%, 0);
+    transform: rotate3d(0,1,0, 180deg); 
+  
+    transform: translate3d(5%, 5%, 0);  
 }
 
 .card:hover .front {
