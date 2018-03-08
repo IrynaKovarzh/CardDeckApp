@@ -8,28 +8,29 @@
     <link rel="stylesheet" type="text/css" href="css/cardrotation.css">
 </head>
 
-<body onload = "showDeck();">
-    
+<body onload="showDeck();">
+
     <form name="Board" class="board">
-       <input type="button" onclick="takecard(this.form)" value="TAKE A CARD" />
-      <!-- <input type="button" onclick="shuffle(this.form)" value="SHUFFLE" /> -->
-     <!-- <input type="button" onclick="takecard(this.form)" value="SHUFFLE WHOLE DECK" /> -->
+        <input type="button" onclick="takecard(this.form)" value="TAKE A CARD" />
+        <input type="button" onclick="shuffle(this.form)" value="SHUFFLE" />
+        <!-- <input type="button" onclick="takecard(this.form)" value="SHUFFLE WHOLE DECK" /> -->
 
         <div class="deck-container"></div>
     </form>
 
-<script type="text/javascript">
-function showDeck(){
- // create a deck
- document.querySelector(".board .deck-container").innerHTML += Deck(); 
-}
-</script> 
+    <script type="text/javascript">
+        function showDeck() {
+            // create a deck
+            document.querySelector(".board .deck-container").innerHTML += Deck();
+        }
+    </script>
 
     <script src="script/data.js"></script>
     <script src="script/card.js"></script>
     <script src="script/deck.js"></script>
-    <script src="script/takecard.js"></script> 
-  <!--  <script src="script/shuffle.js"></script> -->
+    <script src="script/takecard.js"></script>
+    <script src="script/shuffle.js"></script>
 
 </body>
+
 </html>
