@@ -1,6 +1,12 @@
 var lastCard;
 
 function takecard(form) {
+
+    var flippedCards = form.querySelectorAll(".card.flipped");
+    if (flippedCards.length == 0) {
+        lastCard = null;
+    }
+
     if (lastCard) {
         lastCard.style.transform = 'translate3d(200%, -25%, 0) scale(0.3)';
     }
