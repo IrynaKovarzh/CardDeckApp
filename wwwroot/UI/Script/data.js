@@ -1,4 +1,9 @@
-var data = {
+var data = 
+    [
+        {
+'name' : 'Dragons',
+'description' : 'test deck 1',
+
 'back-image' : 'Images/BackTexture1.png', 
 
 'cards' : [
@@ -15,4 +20,5 @@ var data = {
     {'front-image' : 'Images/SQL1.png',
              'text':''}
 ]
-};    
+}
+];    

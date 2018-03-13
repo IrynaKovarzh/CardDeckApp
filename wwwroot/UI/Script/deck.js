@@ -1,4 +1,4 @@
-var deckdata = data;
+var deckdata = data[0];
 
 function Deck() {
   var cardsHTML = "";
