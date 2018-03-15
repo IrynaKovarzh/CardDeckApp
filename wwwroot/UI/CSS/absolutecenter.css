@@ -5,6 +5,7 @@
     margin: auto; */
     width: 272px;
     height: 380px;
+    
     position: absolute;
     top: 50%; right: 50%;
     transform: translate3d(50%, -50%, 0);

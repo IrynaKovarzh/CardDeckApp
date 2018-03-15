@@ -5,7 +5,7 @@ function Deck() {
 
   var cardsAmount = deckdata.cards.length;
 
-  if (!cardsAmount) { }; //to set default? leave an empty? or show a message?
+  if (!cardsAmount) { } //to set default? leave an empty? or show a message?
 
  //to shaffle data
   var cards = deckdata.cards;

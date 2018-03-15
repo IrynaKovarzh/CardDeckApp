@@ -1,9 +1,10 @@
 .deckslist {
-    
+    position: absolute;
+    top: 50%; right: 50%;
+    transform: translate3d(50%, -50%, 0);
 }
 
 .decknode {
-    display : inline-block;
     border : 1px solid #eee;
     box-shadow : 0 2px 2px #ccc;
 
