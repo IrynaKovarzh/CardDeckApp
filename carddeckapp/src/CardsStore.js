@@ -72,11 +72,19 @@ function getAll() {
     return CardsData;
 }
 
+function remove(id) {
+    return CardsData.splice(id, 1);
+  }
+  
 class CardsStore {
 
     getAll() {
         return getAll();
     }
+
+    remove(id) {
+        return remove(id);
+      }
 }
 
 // export singleton

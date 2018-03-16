@@ -9,9 +9,9 @@ class MyDecks extends Component {
     constructor() {
         super();
 
-        const decknodes = [];
-        let data = CardsStore.getAll();
+        let decknodes = [];
 
+        const data = CardsStore.getAll();
         for (let i = 0; i < data.length; i++) {
             decknodes.push({
                 name: data[i]['name'],
@@ -24,6 +24,12 @@ class MyDecks extends Component {
         };
     }
 
+    DeleteDeckHandler(index) {
+        const decknodes = [...this.state.decknodes];
+        decknodes.splice(index, 1);
+        this.setState({ decknodes });
+    }
+
     render() {
         return (
             <div className="deckslist">
@@ -31,11 +37,14 @@ class MyDecks extends Component {
                     <h1>My Cards</h1>
                 </header>
                 <div>
-                    {this.state.decknodes.map((decknode) =>
+                    {this.state.decknodes.map((decknode, index) =>
                         (<DeckNode
                             name={decknode.name}
                             description={decknode.description}
-                        />))}
+                            onRemove={this.DeleteDeckHandler.bind(this, index)}
+                        />)
+                    )
+                    }
                 </div>
             </div>
         );

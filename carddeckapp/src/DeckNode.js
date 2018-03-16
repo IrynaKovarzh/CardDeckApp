@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 class DeckNode extends Component {
+
     render() {
         return (
             <div className='decknode'>
@@ -8,6 +9,7 @@ class DeckNode extends Component {
                 <div>
                     <p>{this.props.description}</p>
                 </div>
+                <button onClick={this.props.onRemove}>Delete</button>
             </div>
         );
     }
