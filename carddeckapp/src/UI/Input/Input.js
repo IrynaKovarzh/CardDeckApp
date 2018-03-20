@@ -1,20 +1,31 @@
 import React, { Component } from 'react';
 
-//import classes from './Input.css';
-import classes from './../../css/decks.css';
+import classes from './Input.css';
 
 const input = (props) => {
     let inputElement = null;
 
-    switch (props.inputtype) {
+    switch (props.elementType) {
         case ('input'):
-            inputElement = <input className={classes.input} {...props} />;
+            inputElement = <input
+                className={classes.InputElement}
+                {...props.elementConfig}
+                value={props.value}
+                onChange={props.changed} />;
             break;
         case ('textarea'):
-            inputElement = <textarea className={classes.textarea} {...props} />;
+            inputElement = <textarea
+                className={classes.InputElement}
+                {...props.elementConfig}
+                value={props.value}
+                onChange={props.changed} />;
             break;
         default:
-            inputElement = <input className={classes.input} {...props} />;
+            inputElement = <input
+                className={classes.InputElement}
+                {...props.elementConfig}
+                value={props.value}
+                onChange={props.changed} />;
     }
 
     return (
