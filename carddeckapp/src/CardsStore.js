@@ -1,4 +1,4 @@
-const CardsData =
+let CardsData =
     [
         {
             'name': 'Dragons',
@@ -74,8 +74,12 @@ function getAll() {
 
 function remove(id) {
     return CardsData.splice(id, 1);
-  }
-  
+}
+
+function add(deck) {
+    return CardsData.push(deck);
+}
+
 class CardsStore {
 
     getAll() {
@@ -84,7 +88,11 @@ class CardsStore {
 
     remove(id) {
         return remove(id);
-      }
+    }
+
+    add(deck) {
+        return add(deck);
+    }
 }
 
 // export singleton

@@ -3,8 +3,9 @@ import React, { Component } from 'react';
 import './css/decks.css';
 
 import Input from './UI/Input/Input';
+import CardsStore from './CardsStore';
 
-class NewDeck extends Component {
+class Deck extends Component {
 
     state = {
         deckForm: {
@@ -41,6 +42,28 @@ class NewDeck extends Component {
         this.setState({ deckForm: updatedDeckForm });
     }
 
+    saveHandler() {
+        //Validation
+        //at least: Name and 1 card
+
+        //Add to the DB
+        const deck = {
+            'name': { ...this.state.deckForm.name.value },
+            'description': { ...this.state.deckForm.description.value },
+
+            'back-image': 'Images/BackTexture1.png',
+            'cards': []
+        };
+        CardsStore.add(deck);
+        //  console.log(CardsStore.getAll().length);
+
+        //come back to My Cards list
+    }
+
+    cancelHandler() {
+
+    }
+
     render() {
 
         const formElementsArray = [];
@@ -67,6 +90,8 @@ class NewDeck extends Component {
                                 changed={(event) => this.inputChangedHandler(event, formElement.id)}
                             />
                             ))}
+                        <button onClick={this.saveHandler}>Save</button>
+                        <button onClick={this.cancelHandler}>Cancel</button>
                     </form>
                 </div>
             </div>
@@ -74,4 +99,4 @@ class NewDeck extends Component {
     }
 }
 
-export default NewDeck;
+export default Deck;
