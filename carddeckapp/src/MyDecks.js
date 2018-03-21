@@ -28,6 +28,10 @@ class MyDecks extends Component {
         const decknodes = [...this.state.decknodes];
         decknodes.splice(index, 1);
         this.setState({ decknodes });
+
+        //Delete from the DB
+        CardsStore.remove(index);
+       // console.log(CardsStore.getAll().length);
     }
 
     render() {
