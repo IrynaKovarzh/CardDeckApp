@@ -8,20 +8,23 @@ import NewDeck from './NewDeck';
 import MyDecks from './MyDecks';
 
 class App extends Component {
+
   render() {
     return (
       <div className="App">
-
-        <Switch>
-          <Route path="/my-decks" component={MyDecks} />
-          <Route path="/new-deck" component={NewDeck} />
-        </Switch>
-
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">CARD BOX</h1>
         </header>
-        <MyDecks />
+
+        <Switch>
+          <Route exact path="/" component={MyDecks} />
+
+          <Route exact path="/mydecks" component={MyDecks} />
+          <Route exact path="/mydecks/new" component={NewDeck} />
+        </Switch>
+
+
       </div>
     );
   }

@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
+import { Link, withRouter } from 'react-router-dom';
+
+import Button from './UI/Button/Button';
 
 import './css/decks.css';
 import CardsStore from './CardsStore';
 import DeckNode from './DeckNode';
+import NewDeck from './NewDeck';
 
 class MyDecks extends Component {
 
@@ -31,7 +35,11 @@ class MyDecks extends Component {
 
         //Delete from the DB
         CardsStore.remove(index);
-       // console.log(CardsStore.getAll().length);
+        // console.log(CardsStore.getAll().length);
+    }
+
+    AddNewHandler = () => {
+        this.props.history.push('/mydecks/new');
     }
 
     render() {
@@ -47,12 +55,14 @@ class MyDecks extends Component {
                             description={decknode.description}
                             onRemove={this.DeleteDeckHandler.bind(this, index)}
                         />)
-                    )
-                    }
+                    )}
+                    <div>
+                        <Button btnType="Success" clicked={this.AddNewHandler}>+</Button>
+                    </div>
                 </div>
             </div>
         );
     }
 }
 
-export default MyDecks;
+export default withRouter(MyDecks);

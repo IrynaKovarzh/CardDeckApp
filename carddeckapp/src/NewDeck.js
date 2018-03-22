@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 
 import './css/decks.css';
 
@@ -57,7 +58,7 @@ class Deck extends Component {
         CardsStore.add(deck);
         //  console.log(CardsStore.getAll().length);
 
-        //come back to My Cards list
+        //come back to My Cards list, that should be (re)rendered
     }
 
     cancelHandler() {
@@ -99,4 +100,4 @@ class Deck extends Component {
     }
 }
 
-export default Deck;
+export default withRouter(Deck);
