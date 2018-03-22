@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 import Button from './UI/Button/Button';
 
 import './css/decks.css';
 import CardsStore from './CardsStore';
 import DeckNode from './DeckNode';
-import NewDeck from './NewDeck';
+import Deck from './NewDeck';
 
 class MyDecks extends Component {
 
@@ -38,9 +38,10 @@ class MyDecks extends Component {
         // console.log(CardsStore.getAll().length);
     }
 
-    AddNewHandler = () => {
-        this.props.history.push('/mydecks/new');
-    }
+
+   AddNewHandler() {
+        this.props.history.push('/mydecks/new');       
+    } 
 
     render() {
         return (
@@ -57,7 +58,7 @@ class MyDecks extends Component {
                         />)
                     )}
                     <div>
-                        <Button btnType="Success" clicked={this.AddNewHandler}>+</Button>
+                        <Button btnType="Success" clicked={this.AddNewHandler.bind(this)}>+</Button>
                     </div>
                 </div>
             </div>

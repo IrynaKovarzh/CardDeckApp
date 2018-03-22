@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 
 import './css/App.css';
 
-import NewDeck from './NewDeck';
+import Deck from './NewDeck';
 import MyDecks from './MyDecks';
 
 class App extends Component {
@@ -21,9 +21,8 @@ class App extends Component {
           <Route exact path="/" component={MyDecks} />
 
           <Route exact path="/mydecks" component={MyDecks} />
-          <Route exact path="/mydecks/new" component={NewDeck} />
+          <Route exact path="/mydecks/new" component={Deck} />
         </Switch>
-
 
       </div>
     );

@@ -4,12 +4,16 @@ import { withRouter } from 'react-router-dom';
 import './css/decks.css';
 
 import Input from './UI/Input/Input';
+import Button from './UI/Button/Button';
+
 import CardsStore from './CardsStore';
 
 class Deck extends Component {
 
-    state = {
-        deckForm: {
+    constructor() {
+        super();
+
+        const deckForm = {
             name: {
                 inputtype: 'input',
                 elementConfig: {
@@ -28,16 +32,16 @@ class Deck extends Component {
                 value: ''
             }
         }
-        //loading: false
+
+        this.state = {
+            deckForm
+            //loading: false
+        }
     }
 
     inputChangedHandler(event, inputIdentifier) {
-        const updatedDeckForm = {
-            ...this.state.deckForm
-        };
-        const updatedFormElement = {
-            ...updatedDeckForm[inputIdentifier]
-        };
+        const updatedDeckForm = this.state.deckForm;
+        const updatedFormElement = updatedDeckForm[inputIdentifier];
         updatedFormElement.value = event.target.value;
         updatedDeckForm[inputIdentifier] = updatedFormElement;
         this.setState({ deckForm: updatedDeckForm });
@@ -49,8 +53,8 @@ class Deck extends Component {
 
         //Add to the DB
         const deck = {
-            'name': { ...this.state.deckForm.name.value },
-            'description': { ...this.state.deckForm.description.value },
+            'name': this.state.deckForm.name.value,
+            'description': this.state.deckForm.description.value,
 
             'back-image': 'Images/BackTexture1.png',
             'cards': []
@@ -59,10 +63,11 @@ class Deck extends Component {
         //  console.log(CardsStore.getAll().length);
 
         //come back to My Cards list, that should be (re)rendered
+        this.props.history.push('/mydecks');
     }
 
     cancelHandler() {
-
+        this.props.history.push('/mydecks');
     }
 
     render() {
@@ -91,8 +96,8 @@ class Deck extends Component {
                                 changed={(event) => this.inputChangedHandler(event, formElement.id)}
                             />
                             ))}
-                        <button onClick={this.saveHandler}>Save</button>
-                        <button onClick={this.cancelHandler}>Cancel</button>
+                        <Button btnType="Success" clicked={this.saveHandler.bind(this)}>Save</Button>
+                        <Button btnType="Danger" clicked={this.cancelHandler.bind(this)}>Cancel</Button>
                     </form>
                 </div>
             </div>
