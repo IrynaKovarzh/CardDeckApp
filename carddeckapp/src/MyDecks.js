@@ -6,7 +6,6 @@ import Button from './UI/Button/Button';
 import './css/decks.css';
 import CardsStore from './CardsStore';
 import DeckNode from './DeckNode';
-import Deck from './NewDeck';
 
 class MyDecks extends Component {
 
@@ -44,6 +43,8 @@ class MyDecks extends Component {
     } 
 
     render() {
+        let k = 0;
+
         return (
             <div className="deckslist">
                 <header>
@@ -55,6 +56,7 @@ class MyDecks extends Component {
                             name={decknode.name}
                             description={decknode.description}
                             onRemove={this.DeleteDeckHandler.bind(this, index)}
+                             key = {k++}  
                         />)
                     )}
                     <div>
