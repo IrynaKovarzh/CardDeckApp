@@ -74,6 +74,11 @@ function getAll() {
     return CardsData;
 }
 
+function get(id) {
+    //Using ES6
+    return CardsData.find(function (d) { return d.id === id; });
+}
+
 function remove(id) {
     return CardsData.splice(id, 1);
 }
@@ -86,6 +91,10 @@ class CardsStore {
 
     getAll() {
         return getAll();
+    }
+
+    get(id) {
+        return get(id);
     }
 
     remove(id) {

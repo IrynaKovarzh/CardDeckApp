@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 import Button from './UI/Button/Button';
 
 import './css/decks.css';
+
 import CardsStore from './CardsStore';
 import DeckNode from './DeckNode';
 
@@ -37,7 +38,6 @@ class MyDecks extends Component {
         CardsStore.remove(index);
         // console.log(CardsStore.getAll().length);
     }
-
 
     AddNewHandler() {
         this.props.history.push('/mydecks/new');

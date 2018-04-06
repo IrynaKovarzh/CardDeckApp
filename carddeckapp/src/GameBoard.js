@@ -3,6 +3,8 @@ import { withRouter } from 'react-router-dom';
 
 import Button from './UI/Button/Button';
 
+import CardsStore from './CardsStore';
+
 class GameBoard extends Component {
 
     closeHandler() {
@@ -10,17 +12,34 @@ class GameBoard extends Component {
     }
 
     render() {
+        let game;
+
+        const id = this.props.match.params.id;
+        const deckdata = CardsStore.get(id);
+        if (deckdata) {  //has a value
+            game =
+                (<div>
+                    <p>{deckdata.name}</p>
+                </div>);
+        } else {
+            game =
+                (<div>
+                    <p>No such a game</p>
+                </div>);
+        }
+
         return (
             <div className="gameBoard">
                 <header>
                     <h1>Game Board</h1>
                 </header>
                 <div>
-                    <p>Game ID:  {this.props.match.params.id}</p>
+                    {game}
                     <Button clicked={this.closeHandler.bind(this)}>Closed</Button>
                 </div>
             </div>
         );
+
     }
 }
 
