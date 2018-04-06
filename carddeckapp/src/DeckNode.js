@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class DeckNode extends Component {
 
     render() {
         return (
             <div className='decknode'>
-                <p>{this.props.name}</p>
+                <Link to={"/gameboard/" + this.props.id} >{this.props.name}</Link>
                 <div>
                     <p>{this.props.description}</p>
                 </div>

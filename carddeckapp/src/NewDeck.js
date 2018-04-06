@@ -60,7 +60,6 @@ class Deck extends Component {
             'cards': []
         };
         CardsStore.add(deck);
-        //  console.log(CardsStore.getAll().length);
 
         //come back to My Cards list, that should be (re)rendered
         this.props.history.push('/mydecks');

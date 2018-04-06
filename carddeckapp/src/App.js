@@ -6,6 +6,7 @@ import './css/App.css';
 
 import Deck from './NewDeck';
 import MyDecks from './MyDecks';
+import GameBoard from './GameBoard';
 
 class App extends Component {
 
@@ -22,6 +23,8 @@ class App extends Component {
 
           <Route exact path="/mydecks" component={MyDecks} />
           <Route exact path="/mydecks/new" component={Deck} />
+
+          <Route path="/gameboard/:id" component={GameBoard} />
         </Switch>
 
       </div>

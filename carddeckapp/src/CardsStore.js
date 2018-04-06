@@ -1,6 +1,7 @@
 let CardsData =
     [
         {
+            'id': '1',
             'name': 'Dragons',
             'description': 'test deck 1abc',
 
@@ -34,6 +35,7 @@ let CardsData =
             ]
         },
         {
+            'id': '2',
             'name': 'Treasure',
             'description': 'test deck 2',
 
