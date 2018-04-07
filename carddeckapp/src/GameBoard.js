@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 
+import './css/decks.css';
+
 import Button from './UI/Button/Button';
 
 import CardsStore from './CardsStore';
+
+import Deck from './Deck';
 
 class GameBoard extends Component {
 
@@ -12,34 +16,30 @@ class GameBoard extends Component {
     }
 
     render() {
-        let game;
+        let game =
+            (<div>
+                <p>No such a game</p>
+            </div>);
 
         const id = this.props.match.params.id;
         const deckdata = CardsStore.get(id);
         if (deckdata) {  //has a value
             game =
-                (<div>
-                    <p>{deckdata.name}</p>
-                </div>);
-        } else {
-            game =
-                (<div>
-                    <p>No such a game</p>
-                </div>);
+                (
+                    <Deck data={deckdata} />
+                );
         }
 
         return (
-            <div className="gameBoard">
-                <header>
-                    <h1>Game Board</h1>
-                </header>
+            <div>
                 <div>
-                    {game}
                     <Button clicked={this.closeHandler.bind(this)}>Closed</Button>
+                </div>
+                <div className="board">
+                    {game}
                 </div>
             </div>
         );
-
     }
 }
 
