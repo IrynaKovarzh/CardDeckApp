@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import { Route, Switch } from 'react-router-dom';
 
-import './css/App.css';
+import './css/app.css';
 
 import Deck from './NewDeck';
 import MyDecks from './MyDecks';

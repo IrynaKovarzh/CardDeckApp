@@ -5,31 +5,31 @@ let CardsData =
             'name': 'Dragons',
             'description': 'test deck 1abc',
 
-            'back-image': 'Images/BackTexture1.png',
+            'back-image': 'BackTexture1',
 
             'cards': [
                 {
-                    'front-image': 'Images/S9L1.png',
+                    'front-image': 'S9L1',
                     'text': ''
                 },
                 {
-                    'front-image': 'Images/S10L1.png',
+                    'front-image': 'S10L1',
                     'text': ''
                 },
                 {
-                    'front-image': 'Images/SAL1.png',
+                    'front-image': 'SAL1',
                     'text': ''
                 },
                 {
-                    'front-image': 'Images/SJL1.png',
+                    'front-image': 'SJL1',
                     'text': ''
                 },
                 {
-                    'front-image': 'Images/SKL1.png',
+                    'front-image': 'SKL1',
                     'text': ''
                 },
                 {
-                    'front-image': 'Images/SQL1.png',
+                    'front-image': 'SQL1',
                     'text': ''
                 }
             ]
@@ -39,31 +39,31 @@ let CardsData =
             'name': 'Treasure',
             'description': 'test deck 2',
 
-            'back-image': 'Images/BackTexture1.png',
+            'back-image': 'BackTexture1',
 
             'cards': [
                 {
-                    'front-image': 'Images/S9L1.png',
+                    'front-image': 'S9L1',
                     'text': ''
                 },
                 {
-                    'front-image': 'Images/S10L1.png',
+                    'front-image': 'S10L1',
                     'text': ''
                 },
                 {
-                    'front-image': 'Images/SAL1.png',
+                    'front-image': 'SAL1',
                     'text': ''
                 },
                 {
-                    'front-image': 'Images/SJL1.png',
+                    'front-image': 'SJL1',
                     'text': ''
                 },
                 {
-                    'front-image': 'Images/SKL1.png',
+                    'front-image': 'SKL1',
                     'text': ''
                 },
                 {
-                    'front-image': 'Images/SQL1.png',
+                    'front-image': 'SQL1',
                     'text': ''
                 }
             ]
