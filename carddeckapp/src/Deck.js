@@ -23,17 +23,17 @@ class Deck extends Component {
 
                     //to shuffle 
                     //Fisher yates shuffle
-                    var i = cardsAmount;
-                    while (--i) {
-                        var j = Math.floor(Math.random() * (i + 1));
-                        if (i !== j) {
-                            var tempi = cards[i];
-                            var tempj = cards[j];
-                            cards[j] = tempi;
-                            cards[i] = tempj;
-                        }
-                    }
-                    deckdata['cards'] = cards;
+                    /*      var i = cardsAmount;
+                          while (--i) {
+                              var j = Math.floor(Math.random() * (i + 1));
+                              if (i !== j) {
+                                  var tempi = cards[i];
+                                  var tempj = cards[j];
+                                  cards[j] = tempi;
+                                  cards[i] = tempj;
+                              }
+                          }
+                          deckdata['cards'] = cards;*/
 
                     let k = 0;
                     deck = (<div className="deck-container">
