@@ -20,23 +20,8 @@ class Deck extends Component {
             if (cards) {
                 const cardsAmount = cards.length;
                 if (cardsAmount) { //to set default? leave an empty? or show a message?
-
-                    //to shuffle 
-                    //Fisher yates shuffle
-                    /*      var i = cardsAmount;
-                          while (--i) {
-                              var j = Math.floor(Math.random() * (i + 1));
-                              if (i !== j) {
-                                  var tempi = cards[i];
-                                  var tempj = cards[j];
-                                  cards[j] = tempi;
-                                  cards[i] = tempj;
-                              }
-                          }
-                          deckdata['cards'] = cards;*/
-
                     let k = 0;
-                    deck = (<div className="deck-container">
+                    deck = (<div>
                         {
                             cards.map((card, index) => (
                                 <Card
